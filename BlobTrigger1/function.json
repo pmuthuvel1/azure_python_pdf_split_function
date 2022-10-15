@@ -1,0 +1,20 @@
+{
+  "scriptFile": "main.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "pdf-input/{name}",
+      "connection": "pdfsplitstorage1_STORAGE"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "pdf-output/{name}",
+      "direction": "out",
+      "connection": "pdfsplitstorage1_STORAGE"
+    }
+  ]
+}
